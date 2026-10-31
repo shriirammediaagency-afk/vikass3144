@@ -1,212 +1,523 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>ElitePips — Free Forex Signals</title>
-<meta name="description" content="Answer a quick question to access our free Forex trading resources and signals. Educational content only."/>
-<meta name="theme-color" content="#001022">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gautam Kumar Jha | Elite Market Intelligence</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1487801873214478');
+    fbq('track', 'PageView');
 
-<!-- Meta Pixel (kept) -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1593721464926438');
-fbq('track', 'PageView');
-</script>
+    function trackSubscriber(channelPlacement) {
+        if (typeof fbq === 'function') {
+            fbq('track', 'Subscribe', {
+                content_name: channelPlacement || 'VIP Telegram Channel',
+                status: 'subscribed'
+            });
+        }
+    }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1487801873214478&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
 
-<style>
-:root{
-  --accent1:#ff7a00;
-  --accent2:#ff4d00;
-  --text:#e6eefb;
-  --muted:#bfcfe6;
-  --card-bg:rgba(6,8,15,0.92);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  background:linear-gradient(160deg,#001022,#002a4a);
-  display:flex;align-items:center;justify-content:center;
-  padding:18px;color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-}
-.container{
-  width:100%;max-width:640px;
-  background:var(--card-bg);
-  border-radius:14px;padding:20px;
-  box-shadow:0 24px 60px rgba(0,10,30,0.6);
-  position:relative;overflow:hidden;color:var(--text);
-}
-.progressWrap{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.progress{flex:1;height:9px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
-.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent1),var(--accent2));width:0;transition:width .45s ease}
-.progressNum{min-width:44px;text-align:right;color:var();font-weight:700;font-size:13px}
-.question{animation:fadeIn .32s ease;text-align:center;margin-bottom:14px}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.hype{
-  display:inline-block;padding:10px 14px;border-radius:12px;font-weight:900;font-size:20px;
-  background:linear-gradient(90deg,#ffd9b3,#ffb48a);color:#1b0520;
-  box-shadow:0 8px 30px rgba(255,120,0,0.12);
-}
-.hype.small{font-size:16px;padding:8px 12px}
-.pulse{animation:pulse 1.6s infinite}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
-.options{display:flex;flex-direction:column;gap:10px;margin-top:12px}
-.option{
-  background:rgba(255,255,255,0.02);
-  border-radius:12px;padding:12px 14px;cursor:pointer;font-weight:800;text-align:center;
-  border:1px solid rgba(255,255,255,0.04);
-  box-shadow:0 8px 30px rgba(0,0,0,0.5);
-  transition:transform .16s,box-shadow .16s,background .16s;
-}
-.option:hover{transform:translateY(-6px);box-shadow:0 18px 46px rgba(255,90,0,0.12);background:linear-gradient(90deg,rgba(255,90,0,0.08),rgba(255,150,0,0.06));}
-.option.selected{background:linear-gradient(90deg,rgba(255,120,0,0.18),rgba(255,60,0,0.12));color:#fff;transform:translateY(-8px)}
-.thankyou{text-align:center;padding:6px}
-.thank-h{font-size:20px;margin:6px 0;font-weight:900}
-.thank-sub{color:var();margin-bottom:12px}
-.join-btn{
-  display:inline-block;position:relative;overflow:hidden;
-  background:linear-gradient(90deg,#ff7a00,#ff4d00);
-  color:#fff;padding:12px 18px;border-radius:12px;font-weight:900;text-decoration:none;
-  box-shadow:0 14px 40px rgba(255,90,0,0.18);
-}
-.join-btn::after{content:'';position:absolute;left:-50%;top:0;width:40%;height:100%;background:linear-gradient(120deg,rgba(255,255,255,0)0%,rgba(255,255,255,0.14)50%,rgba(255,255,255,0)100%);transform:skewX(-20deg);filter:blur(6px);animation:shine 3.4s linear infinite}
-@keyframes shine{0%{left:-60%}100%{left:120%}}
-.fomo{background:linear-gradient(90deg,#ffe6d6,#ffd0b3);color:#2b0a00;padding:8px 12px;border-radius:10px;font-weight:800;display:inline-block;margin:10px 0;font-size:13px}
-.small{font-size:13px;color:var();margin-top:8px}
-.row{display:flex;gap:10px;justify-content:center;margin-top:12px}
-.btn-ghost{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);font-weight:700;text-decoration:none;cursor:pointer}
-.note{font-size:12px;color:var(--muted);margin-top:10px}
-@media (max-width:520px){.container{padding:14px}.hype{font-size:18px}}
-</style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        dark: {
+                            base: '#07090e',
+                            card: 'rgba(15, 23, 42, 0.65)',
+                            border: 'rgba(255, 255, 255, 0.08)'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #05070e;
+            -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Cyber-Mesh Glow */
+        .ambient-mesh {
+            background-color: #05070e;
+            background-image: 
+                radial-gradient(at 50% 0%, rgba(30, 58, 138, 0.3) 0px, transparent 55%),
+                radial-gradient(at 95% 30%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
+                radial-gradient(at 5% 70%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(79, 70, 229, 0.15) 0px, transparent 55%);
+        }
+
+        /* Subtle fine grid overlay */
+        .grid-matrix {
+            background-size: 28px 28px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        /* Glassmorphism Compact */
+        .glass-box {
+            background: rgba(12, 17, 29, 0.72);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Pulsing Aura Button with Laser Sweep */
+        .btn-luxury-glow {
+            position: relative;
+            background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #4338ca 100%);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.4), 0 0 35px rgba(14, 165, 233, 0.2);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        .btn-luxury-glow:hover {
+            box-shadow: 0 0 28px rgba(37, 99, 235, 0.65), 0 0 45px rgba(14, 165, 233, 0.35);
+            transform: translateY(-1px);
+        }
+        .btn-luxury-glow:active {
+            transform: scale(0.98);
+        }
+
+        .btn-luxury-glow::after {
+            content: '';
+            position: absolute;
+            top: -60%;
+            left: -80%;
+            width: 45%;
+            height: 220%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.35) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(26deg);
+            animation: laser-shine 3s infinite ease-in-out;
+        }
+
+        @keyframes laser-shine {
+            0% { left: -80%; }
+            30% { left: 160%; }
+            100% { left: 160%; }
+        }
+
+        /* Avatar Glow Ring */
+        .avatar-glow-ring {
+            box-shadow: 0 0 22px rgba(14, 165, 233, 0.35), 0 0 35px rgba(37, 99, 235, 0.2);
+        }
+
+        /* Emerald Radar Pulse */
+        @keyframes radar-ping {
+            0% { transform: scale(0.85); opacity: 0.9; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.8); }
+            70% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.85); opacity: 0.9; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+        .live-ping {
+            animation: radar-ping 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
 </head>
+<body class="min-h-screen text-slate-100 ambient-mesh grid-matrix flex flex-col justify-between selection:bg-cyan-500 selection:text-white">
 
-<body>
-<main class="container" id="card">
-  <div class="progressWrap">
-    <div class="progress"><i id="bar"></i></div>
-    <div class="progressNum" id="progNum">0%</div>
-  </div>
-
-  <div id="q-box">
-    <!-- Single question will be rendered here -->
-  </div>
-</main>
-
-<script>
-/* ---------- CONFIG ---------- */
-const telegramLink = "https://telegram.me/+ZVpxPGfP6LFiZDFl"; // updated link
-/* ---------- STATE ---------- */
-let answered = false;
-const qBox = document.getElementById('q-box'), bar = document.getElementById('bar'), progNum = document.getElementById('progNum');
-
-/* ---------- RENDER ---------- */
-function renderSingleQuestion(){
-  qBox.innerHTML = `
-    <div class="question">
-      <div class="hype pulse">🔥 Live Forex set-ups — join our learning community</div>
-      <div style="height:8px"></div>
-      <div class="options">
-        <div class="option" data-val="yes">Yes — I want access to signals & learning</div>
-        <div class="option" data-val="no">Not right now — show me resources</div>
-      </div>
-      <div class="small">Takes one tap. We share educational trade ideas only — not financial advice.</div>
-    </div>
-  `;
-  updateProgress(0);
-  document.querySelectorAll('.option').forEach(o=>o.addEventListener('click', onChooseSingle));
-}
-
-function updateProgress(pct){
-  bar.style.width = pct + "%";
-  progNum.textContent = pct + "%";
-}
-
-/* ---------- PIXEL TRACKING WRAPPER ---------- */
-function sendSubscribe(eventName, payload){
-  try{ fbq('track', eventName, payload || {}); }catch(e){}
-  // optionally send to your server for verification:
-  // navigator.sendBeacon('/api/track', JSON.stringify({event:eventName, payload}));
-}
-
-/* ---------- BASIC CLIENT BOT CHECK ----------
-   This is a lightweight check: requires a human click on "Proceed"
-   Replace/upgrade with Cloudflare Turnstile / hCaptcha for stronger protection.
--------------------------------------------*/
-function onChooseSingle(ev){
-  if(answered) return;
-  answered = true;
-  const el = ev.currentTarget;
-  const val = el.getAttribute('data-val');
-  document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));
-  el.classList.add('selected');
-  setTimeout(()=>{ updateProgress(66); showConfirmFor(val); },220);
-}
-
-function showConfirmFor(val){
-  if(val === 'yes'){
-    qBox.innerHTML = `
-      <div class="thankyou">
-        <div class="hype small">You're almost there — quick confirm</div>
-        <div class="thank-sub">We keep the group focused on learning and real setups. Educational content only.</div>
-        <div><span class="fomo">⚡ Limited interactive spots — priority given to active learners</span></div>
-        <div class="row" style="margin-top:14px">
-          <button id="proceedBtn" class="join-btn">Proceed to Telegram →</button>
+    <!-- Top Sticky Bar -->
+    <header class="w-full glass-box border-x-0 border-t-0 py-2 px-3.5 sticky top-0 z-40 flex items-center justify-between shadow-md">
+        <div class="flex items-center space-x-2">
+            <div class="relative w-7 h-7 rounded-full p-[1px] bg-gradient-to-tr from-cyan-400 via-blue-500 to-indigo-500 flex-shrink-0">
+                <img src="Gautam01.jpeg" 
+                     alt="Gautam Kumar Jha" 
+                     class="w-full h-full rounded-full object-cover bg-slate-900"
+                     onerror="this.src='https://placehold.co/100x100/0b132b/38bdf8?text=GKJ';">
+                <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-slate-950"></span>
+            </div>
+            <div class="leading-tight">
+                <div class="flex items-center gap-1">
+                    <span class="font-extrabold text-white text-xs tracking-tight">Gautam Kumar Jha</span>
+                    <i class="fa-solid fa-circle-check text-cyan-400 text-[10px]"></i>
+                </div>
+                <span class="text-[8.5px] font-semibold text-cyan-400 uppercase tracking-wider block">Index specialist</span>
+            </div>
         </div>
-        <div class="note">By proceeding you confirm you want educational trade setups. Not financial advice.</div>
-      </div>
-    `;
-    updateProgress(85);
-    sendSubscribe('Subscribe', {interested: 'yes', step: 'confirm_shown'});
-    setTimeout(()=>{ const pb = document.getElementById('proceedBtn'); if(pb) pb.addEventListener('click', onProceedClickYes); },80);
-  } else {
-    qBox.innerHTML = `
-      <div class="thankyou">
-        <div class="hype small">No problem — check our free resources</div>
-        <div class="thank-sub">We share guides, sample setups and educational posts in the resource page.</div>
-        <div class="row">
-          <button id="backBtn" class="btn-ghost">Back</button>
-          <a id="learnBtn" class="join-btn" href="${telegramLink}" target="_blank" rel="noopener">See Resources →</a>
+
+        <a href="https://t.me/+el0K4gNIx7cxZDI1" 
+           target="_blank" 
+           onclick="trackSubscriber('Header Direct CTA')" 
+           class="inline-flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-cyan-500/15 to-blue-600/20 hover:from-cyan-500/25 border border-cyan-400/40 text-cyan-300 font-bold text-[10.5px] rounded-full transition-all">
+            <i class="fa-brands fa-telegram text-cyan-400 text-xs"></i>
+            <span>Join Free</span>
+        </a>
+    </header>
+
+    <!-- Main Content Flow (Ultra-Compact Mobile Fit) -->
+    <main class="flex-grow flex items-center justify-center px-3.5 py-3">
+        <div class="w-full max-w-[390px] mx-auto flex flex-col items-center text-center space-y-2.5">
+
+            <!-- Live Status & Ticker -->
+            <div class="flex items-center justify-between w-full px-3 py-1 rounded-full glass-box text-[10.5px] font-semibold border-cyan-500/20">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 live-ping"></span>
+                    <span class="text-slate-300"><span id="activeTraders" class="font-bold text-emerald-400 font-mono">6,184</span> Active Now</span>
+                </div>
+                <div class="flex items-center gap-1 text-amber-300 font-mono text-[9.5px] bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/30">
+                    <i class="fa-regular fa-clock text-[9px] animate-pulse"></i>
+                    <span>Free pass: <strong id="countdownTimer">04:59</strong></span>
+                </div>
+            </div>
+
+            <!-- Profile Showcase -->
+            <div class="flex flex-col items-center space-y-1.5 pt-0.5">
+                <!-- Avatar -->
+                <div class="relative">
+                    <div class="w-[68px] h-[68px] rounded-full p-[2px] bg-gradient-to-tr from-cyan-400 via-blue-500 to-indigo-600 avatar-glow-ring">
+                        <img src="Gautam01.jpeg" 
+                             alt="Gautam Kumar Jha" 
+                             class="w-full h-full object-cover rounded-full bg-slate-900 border-2 border-slate-950"
+                             onerror="this.src='https://placehold.co/200x200/0a1128/38bdf8?text=GKJ';">
+                    </div>
+                    <span class="absolute bottom-0 right-0 w-5 h-5 rounded-full bg-blue-600 border-2 border-[#05070e] flex items-center justify-center text-white text-[9px] shadow-md shadow-blue-500/50">
+                        <i class="fa-solid fa-check text-white"></i>
+                    </span>
+                </div>
+
+                <!-- Title & Authority Strip -->
+                <div>
+                    <h1 class="text-lg sm:text-xl font-black text-white tracking-tight uppercase leading-tight">
+                        Gautam Kumar Jha
+                    </h1>
+                    <p class="text-[11px] font-bold text-cyan-400 tracking-wide">
+                        India's Premier NIFTY & BANKNIFTY Desk
+                    </p>
+                </div>
+
+                <!-- Star Rating Badge -->
+                <div class="flex items-center gap-1.5">
+                    <div class="flex text-amber-400 text-[10px] space-x-0.5">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-[10px] font-bold text-slate-300">4.9/5</span>
+                    <span class="text-slate-400 text-[9.5px]">• 50,000+ Community</span>
+                </div>
+            </div>
+
+            <!-- Primary Glowing CTA Button -->
+            <div class="w-full space-y-1">
+                <a href="https://t.me/+el0K4gNIx7cxZDI1" 
+                   target="_blank" 
+                   onclick="trackSubscriber('Hero Primary CTA')" 
+                   class="w-full py-3 px-4 text-white font-extrabold text-xs tracking-wider uppercase rounded-xl btn-luxury-glow flex items-center justify-between shadow-lg">
+                    <div class="flex items-center gap-2">
+                        <span class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center text-cyan-300 text-sm">
+                            <i class="fa-brands fa-telegram"></i>
+                        </span>
+                        <div class="text-left leading-tight">
+                            <span class="block text-xs font-black text-white">Join Free Telegram VIP</span>
+                            <span class="block text-[8.5px] text-cyan-200 font-medium">Daily NIFTY & BANKNIFTY Levels</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-cyan-200 gap-1 text-[11px] font-black">
+                        <span>JOIN</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </a>
+                <p class="text-[8.5px] text-slate-400 flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> 100% Free VIP Educational Access
+                </p>
+            </div>
+
+            <!-- Compact Metrics Grid -->
+            <div class="grid grid-cols-3 gap-1.5 w-full">
+                <div class="glass-box py-1.5 px-1 rounded-xl flex flex-col items-center justify-center">
+                    <span class="text-sm sm:text-base font-black text-white font-mono">55K+</span>
+                    <span class="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">Members</span>
+                </div>
+                <div class="glass-box py-1.5 px-1 rounded-xl flex flex-col items-center justify-center border-cyan-500/30">
+                    <span class="text-sm sm:text-base font-black text-cyan-400 font-mono">5+ Yrs</span>
+                    <span class="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">Experience</span>
+                </div>
+                <div class="glass-box py-1.5 px-1 rounded-xl flex flex-col items-center justify-center border-emerald-500/30">
+                    <span class="text-sm sm:text-base font-black text-emerald-400 font-mono">94%</span>
+                    <span class="text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">Accuracy</span>
+                </div>
+            </div>
+
+            <!-- Ultra-Short Highlights (Compact 3 Bullets) -->
+            <div class="w-full glass-box p-2.5 rounded-xl text-left space-y-1.5 border-slate-800">
+                <div class="flex items-center space-x-2">
+                    <div class="w-5 h-5 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-[10px] flex-shrink-0">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <p class="text-[11px] font-bold text-white">Daily Index Setups</p>
+                        <p class="text-[9px] text-slate-400">Pre-market institutional levels for NIFTY, BANKNIFTY & SENSEX.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <div class="w-5 h-5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] flex-shrink-0">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <p class="text-[11px] font-bold text-white">Strict Risk & Reward (1:2+)</p>
+                        <p class="text-[9px] text-slate-400">Clear stop-loss, logical targets & capital protection rules.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <div class="w-5 h-5 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-[10px] flex-shrink-0">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <p class="text-[11px] font-bold text-white">Price Action Learning</p>
+                        <p class="text-[9px] text-slate-400">Pure candlestick, open interest and momentum studies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary CTA Button -->
+            <div class="w-full pt-0.5">
+                <a href="https://t.me/+el0K4gNIx7cxZDI1" 
+                   target="_blank" 
+                   onclick="trackSubscriber('Secondary CTA')" 
+                   class="w-full py-2.5 px-4 text-white font-extrabold text-[11px] tracking-wider uppercase rounded-xl btn-luxury-glow flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-telegram text-cyan-300 text-sm"></i>
+                    <span>Tap to Enter Telegram Free</span>
+                    <i class="fa-solid fa-angle-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Mini Compliance Note -->
+            <p class="text-[8.5px] text-slate-400 leading-tight px-1 font-medium">
+                <strong class="text-slate-300">Disclaimer:</strong> For educational purposes only. Not SEBI registered. Trading involves capital risk.
+            </p>
+
         </div>
-        <div class="note">You can always come back and request signals later.</div>
-      </div>
-    `;
-    updateProgress(100);
-    sendSubscribe('Subscribe', {interested: 'no'});
-    setTimeout(()=>{ const bb=document.getElementById('backBtn'); if(bb) bb.addEventListener('click', ()=>{ answered=false; renderSingleQuestion(); }); },50);
-    setTimeout(()=>{ const lb=document.getElementById('learnBtn'); if(lb) lb.addEventListener('click', ()=>sendSubscribe('LearnClick',{interested:'no'})); },50);
-  }
-}
+    </main>
 
-function onProceedClickYes(){
-  // Instead of direct join, open the server-side redirect which logs clicks.
-  sendSubscribe('ProceedClick', {interested:'yes'});
-  const win = window.open('/go/redirect.html?to=telegram', '_blank', 'noopener');
-  if(!win){ window.location.href = '/go/redirect.html?to=telegram'; }
-  qBox.innerHTML = `
-    <div class="thankyou">
-      <div class="hype small">Done — check your Telegram</div>
-      <div class="thank-sub">If Telegram didn't open, tap the button again.</div>
-      <div class="row" style="margin-top:12px">
-        <a class="join-btn" href="/go/redirect.html?to=telegram" target="_blank" rel="noopener">Open Telegram →</a>
-      </div>
-      <div class="note">Educational content only. No guarantees of profit.</div>
+    <!-- Sleek Compact Footer with Full Compliance Links -->
+    <footer class="w-full glass-box border-x-0 border-b-0 py-2.5 px-3 mt-2">
+        <div class="max-w-md mx-auto flex flex-col items-center space-y-1.5">
+            <!-- Modal Navigation Pills -->
+            <nav class="flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 text-[9.5px] font-bold text-slate-400">
+                <button onclick="openModal('aboutModal')" class="hover:text-cyan-400 transition-colors">About Us</button>
+                <span class="text-slate-700">•</span>
+                <button onclick="openModal('termsModal')" class="hover:text-cyan-400 transition-colors">Terms & Conditions</button>
+                <span class="text-slate-700">•</span>
+                <button onclick="openModal('privacyModal')" class="hover:text-cyan-400 transition-colors">Privacy Policy</button>
+                <span class="text-slate-700">•</span>
+                <button onclick="openModal('disclaimerModal')" class="hover:text-cyan-400 transition-colors">Disclaimer</button>
+                <span class="text-slate-700">•</span>
+                <button onclick="openModal('contactModal')" class="hover:text-cyan-400 transition-colors">Contact Us</button>
+            </nav>
+
+            <!-- Copyright -->
+            <div class="text-[8.5px] text-slate-400 font-mono text-center">
+                &copy; <span id="currentYear"></span> Gautam Kumar Jha Desk. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE LEGAL & COMPLIANCE MODALS -->
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3.5">
+        <div class="glass-box bg-slate-900/98 w-full max-w-sm rounded-2xl p-4 sm:p-5 shadow-2xl relative border border-slate-700 max-h-[82vh] overflow-y-auto">
+            <button onclick="closeModal('aboutModal')" class="absolute top-3.5 right-3.5 text-slate-400 hover:text-white text-xs w-6 h-6 flex items-center justify-center rounded-full bg-slate-800">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-xs sm:text-sm font-extrabold text-white mb-2 pb-1.5 border-b border-slate-800 flex items-center gap-1.5">
+                <i class="fa-solid fa-user-shield text-cyan-400"></i> About Gautam Kumar Jha Desk
+            </h3>
+            <div class="text-[11px] text-slate-300 space-y-2 leading-relaxed">
+                <p>Welcome to <strong>Gautam Kumar Jha’s</strong> stock trading education desk. Our mission is to educate and empower Indian retail investors through structured technical research, disciplined risk management, and live chart case studies.</p>
+                <p>With over 5 years of professional market analysis experience, Gautam specializes in price action dynamics, open interest interpretation, and key institutional support-resistance breakout zones across NIFTY, BANKNIFTY, and high-volume equity stocks.</p>
+                <p>We believe long-term market consistency is built on strict stop-loss adherence, favorable risk-to-reward ratios (minimum 1:2), and psychological discipline, not hasty speculation.</p>
+            </div>
+            <button onclick="closeModal('aboutModal')" class="mt-3.5 w-full py-2 bg-blue-600 text-white font-bold rounded-xl text-[11px] hover:bg-blue-500 transition">Close</button>
+        </div>
     </div>
-  `;
-  updateProgress(100);
-}
 
-/* ---------- INITIAL ---------- */
-renderSingleQuestion();
-</script>
+    <!-- Terms & Conditions Modal -->
+    <div id="termsModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3.5">
+        <div class="glass-box bg-slate-900/98 w-full max-w-sm rounded-2xl p-4 sm:p-5 shadow-2xl relative border border-slate-700 max-h-[82vh] overflow-y-auto">
+            <button onclick="closeModal('termsModal')" class="absolute top-3.5 right-3.5 text-slate-400 hover:text-white text-xs w-6 h-6 flex items-center justify-center rounded-full bg-slate-800">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-xs sm:text-sm font-extrabold text-white mb-2 pb-1.5 border-b border-slate-800 flex items-center gap-1.5">
+                <i class="fa-solid fa-file-contract text-cyan-400"></i> Terms & Conditions
+            </h3>
+            <div class="text-[10.5px] text-slate-300 space-y-2 leading-relaxed text-left">
+                <p><strong>1. Informational & Educational Scope:</strong> All charts, breakout levels, market commentary, and visual aids shared via our Telegram channel or website are strictly intended for classroom learning, paper-trading observations, and technical study.</p>
+                <p><strong>2. No Guaranteed Profit / Returns:</strong> Trading in financial markets carries substantial risk of capital depreciation. We do not promise, guarantee, or hint at any assured ROI, fixed returns, or zero-loss trading.</p>
+                <p><strong>3. User Discretion & Financial Liability:</strong> Any trading transaction entered into by you across options, futures, intraday, or delivery is your sole financial responsibility. The desk, owners, and operators assume no liability for individual trading profits or losses.</p>
+                <p><strong>4. Intellectual Property:</strong> Charts, write-ups, analysis formats, and branded materials belong to Gautam Kumar Jha Desk and may not be reproduced or resold without prior written consent.</p>
+                <p><strong>5. Acceptance:</strong> By joining our Telegram channel or utilizing this page, you confirm that you have read, understood, and consented to these Terms.</p>
+            </div>
+            <button onclick="closeModal('termsModal')" class="mt-3.5 w-full py-2 bg-blue-600 text-white font-bold rounded-xl text-[11px] hover:bg-blue-500 transition">I Agree & Understand</button>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3.5">
+        <div class="glass-box bg-slate-900/98 w-full max-w-sm rounded-2xl p-4 sm:p-5 shadow-2xl relative border border-slate-700 max-h-[82vh] overflow-y-auto">
+            <button onclick="closeModal('privacyModal')" class="absolute top-3.5 right-3.5 text-slate-400 hover:text-white text-xs w-6 h-6 flex items-center justify-center rounded-full bg-slate-800">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-xs sm:text-sm font-extrabold text-white mb-2 pb-1.5 border-b border-slate-800 flex items-center gap-1.5">
+                <i class="fa-solid fa-user-lock text-cyan-400"></i> Privacy Policy
+            </h3>
+            <div class="text-[10.5px] text-slate-300 space-y-2 leading-relaxed text-left">
+                <p><strong>1. Data Collection:</strong> We do not collect personal sensitive information such as bank passwords, PAN, or Aadhaar on this landing page.</p>
+                <p><strong>2. Analytics & Meta Pixel:</strong> We employ the Meta (Facebook) Pixel to observe aggregate page traffic, button interactions, and optimize campaign delivery. Cookies may be stored by your browser to facilitate these standard analytics.</p>
+                <p><strong>3. Third-Party Platforms:</strong> When clicking outward links to Telegram, your use is governed by Telegram's respective Privacy Policy and Terms of Service. We do not sell or rent user phone numbers or emails to any third-party brokers.</p>
+                <p><strong>4. Security:</strong> Standard SSL encryption is maintained across our hosting environment to ensure private transmission of page sessions.</p>
+            </div>
+            <button onclick="closeModal('privacyModal')" class="mt-3.5 w-full py-2 bg-blue-600 text-white font-bold rounded-xl text-[11px] hover:bg-blue-500 transition">Understood</button>
+        </div>
+    </div>
+
+    <!-- Regulatory Disclaimer Modal -->
+    <div id="disclaimerModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3.5">
+        <div class="glass-box bg-slate-900/98 w-full max-w-sm rounded-2xl p-4 sm:p-5 shadow-2xl relative border border-slate-700 max-h-[82vh] overflow-y-auto">
+            <button onclick="closeModal('disclaimerModal')" class="absolute top-3.5 right-3.5 text-slate-400 hover:text-white text-xs w-6 h-6 flex items-center justify-center rounded-full bg-slate-800">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-xs sm:text-sm font-extrabold text-amber-400 mb-2 pb-1.5 border-b border-slate-800 flex items-center gap-1.5">
+                <i class="fa-solid fa-triangle-exclamation"></i> Statutory & Compliance Disclaimer
+            </h3>
+            <div class="text-[10.5px] text-slate-300 space-y-2 leading-relaxed text-left">
+                <p><strong>1. Not SEBI Registered:</strong> Gautam Kumar Jha Desk is NOT a SEBI (Securities and Exchange Board of India) registered Research Analyst, Investment Advisor, or Portfolio Management Service (PMS).</p>
+                <p><strong>2. No Direct Buy/Sell Advisory:</strong> We do not provide personalized stock recommendations, call-and-put buying instructions, or fund handling. All chart levels reflect educational perspectives only.</p>
+                <p><strong>3. SEBI Risk Warning for Derivatives:</strong> 9 out of 10 individual traders in equity Futures and Options Segment incurred net losses according to SEBI study data. Traders lose significant capital if proper stop-loss and position sizing are not observed.</p>
+                <p><strong>4. Professional Advice:</strong> Consult an authorized, SEBI-certified investment financial advisor before committing real capital into financial markets.</p>
+            </div>
+            <button onclick="closeModal('disclaimerModal')" class="mt-3.5 w-full py-2 bg-blue-600 text-white font-bold rounded-xl text-[11px] hover:bg-blue-500 transition">I Acknowledge</button>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3.5">
+        <div class="glass-box bg-slate-900/98 w-full max-w-sm rounded-2xl p-4 sm:p-5 shadow-2xl relative border border-slate-700 max-h-[82vh] overflow-y-auto">
+            <button onclick="closeModal('contactModal')" class="absolute top-3.5 right-3.5 text-slate-400 hover:text-white text-xs w-6 h-6 flex items-center justify-center rounded-full bg-slate-800">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-xs sm:text-sm font-extrabold text-white mb-2 pb-1.5 border-b border-slate-800 flex items-center gap-1.5">
+                <i class="fa-solid fa-headset text-cyan-400"></i> Official Contact Desk
+            </h3>
+            <div class="text-[10.5px] text-slate-300 space-y-2.5 leading-relaxed text-left">
+                <p>Have an inquiry, feedback, or community grievance? Reach our desk through the verified channels below:</p>
+                <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700 space-y-2 font-mono text-[10px]">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-cyan-400"></i>
+                        <span class="text-slate-200">support@gautamkumarjha.com</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-brands fa-telegram text-blue-400"></i>
+                        <a href="https://t.me/+el0K4gNIx7cxZDI1" target="_blank" onclick="trackSubscriber('Contact Modal Link')" class="text-cyan-300 underline font-semibold">t.me/+el0K4gNIx7cxZDI1</a>
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-400 text-[9px]">
+                        <i class="fa-regular fa-clock text-emerald-400"></i>
+                        <span>Support Hours: Mon-Fri, 9:00 AM - 6:00 PM IST</span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="closeModal('contactModal')" class="mt-3.5 w-full py-2 bg-blue-600 text-white font-bold rounded-xl text-[11px] hover:bg-blue-500 transition">Done</button>
+        </div>
+    </div>
+
+    <!-- Scripts: Countdown, Live Simulation, Modals -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // 5-minute rolling countdown loop
+        let totalSeconds = 5 * 60;
+        const timerElement = document.getElementById('countdownTimer');
+
+        setInterval(() => {
+            if (totalSeconds <= 0) {
+                totalSeconds = 5 * 60;
+            } else {
+                totalSeconds--;
+            }
+            const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+            const seconds = String(totalSeconds % 60).padStart(2, '0');
+            if (timerElement) {
+                timerElement.textContent = `${minutes}:${seconds}`;
+            }
+        }, 1000);
+
+        // Fluctuate active trader count realistically
+        const tradersEl = document.getElementById('activeTraders');
+        setInterval(() => {
+            if (tradersEl) {
+                let current = parseInt(tradersEl.textContent.replace(',', ''));
+                const delta = Math.floor(Math.random() * 7) - 3;
+                current = Math.max(6100, Math.min(6300, current + delta));
+                tradersEl.textContent = current.toLocaleString();
+            }
+        }, 3500);
+
+        // Modal Handlers
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Tap outside modal to dismiss
+        window.addEventListener('click', function(event) {
+            const modals = ['aboutModal', 'termsModal', 'privacyModal', 'disclaimerModal', 'contactModal'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (event.target === modal) {
+                    closeModal(modalId);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
